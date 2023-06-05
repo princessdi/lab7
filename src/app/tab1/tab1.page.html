@@ -1,0 +1,67 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Лабораторна робота №1 </ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title> Виконала студентка групи КН-32 Мазур Д. В. </ion-title>
+  </ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button color="dark" menu="first"></ion-menu-button>
+    </ion-buttons>
+    <ion-title> Лабораторні роботи </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> Завдання №1 </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        Задано три числа. Якщо хоч одне з них більше за 5, то знайти куб суми. В
+        іншому випадку – суму .
+      </p>
+      <ion-item>
+        <ion-label position="floating">Перше число</ion-label>
+        <ion-input
+          type="number"
+          id="a"
+          value="1"
+          [(ngModel)]="Inputa"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Друге число</ion-label>
+        <ion-input
+          type="number"
+          id="b"
+          value="2"
+          [(ngModel)]="Inputb"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Третє число</ion-label>
+        <ion-input
+          type="number"
+          id="c"
+          value="3"
+          [(ngModel)]="Inputc"
+        ></ion-input>
+      </ion-item>
+      <ion-button expand="block" (click)="ras(Inputa, Inputb, Inputc)"
+        >Розрахунок</ion-button
+      >
+    </ion-card-content>
+    <ion-item>
+      <p>Результат обчислення {{d}}</p>
+    </ion-item>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title> Лабораторна робота №1 </ion-title>
+  </ion-toolbar>
+</ion-footer>
